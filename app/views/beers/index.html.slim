@@ -1,0 +1,31 @@
+.page-header
+  = link_to new_beer_path, class: 'btn btn-primary' do 
+    i.fa.fa-plus
+    |  New Beer
+  h1
+    | Listing beers
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Name
+        th
+          | Description
+        th
+        th
+        th
+    tbody
+      - @beers.each do | beer |
+        tr
+          td
+            = beer.name
+          td
+            = beer.description
+          td
+            = link_to 'Show', beer
+          td
+            = link_to 'Edit', edit_beer_path(beer) 
+          td
+            = link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } 

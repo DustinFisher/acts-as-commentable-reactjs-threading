@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_commentable_with_threading'
 gem 'coffee-rails', '~> 4.2.1'
 gem 'devise'
 gem 'dotenv-rails'
@@ -9,7 +10,7 @@ gem "pg", "~> 0.18"
 gem 'puma'
 gem 'pundit'
 gem 'rails', '5.0.0'
-  gem "react_on_rails", "~> 6"
+gem "react_on_rails", "~> 6"
 gem 'sass-rails', '~> 5.0'
 gem 'sidekiq'
 gem 'simple_form'

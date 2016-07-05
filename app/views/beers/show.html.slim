@@ -1,0 +1,21 @@
+.page-header
+  = link_to beers_path, class: 'btn btn-default' do 
+    i.fa.fa-list-alt
+    |  Back 
+  = link_to edit_beer_path(@beer), class: 'btn btn-primary' do 
+    i.fa.fa-pencil
+    |  Edit 
+  h1
+    | Show beer
+dl.dl-horizontal
+  dt
+    | Name:
+  dd
+    = @beer.name
+  dt
+    | Description:
+  dd
+    = @beer.description
+
+
+= render partial: "comments/template", locals: {commentable: @beer, new_comment: @comment}
